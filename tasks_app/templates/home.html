@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Task Manager{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-primary mb-4"><i class="bi bi-card-checklist"></i> Django Task Manager</h1>
+
+    <p>This is a Django-based web application for task managing.</p>
+
+    <ul class="list-group mb-4">
+        <li class="list-group-item"></i>  1. Create, view, and filter tasks by category.</li>
+        <li class="list-group-item"></i>  2. Only admins can manage categories.</li>
+        <li class="list-group-item"></i>  3. Bootstrap styled UI.</li>
+        <li class="list-group-item"></i>  4. Loggin Required for admin page.</li>
+    </ul>
+
+    <h4 class="mt-4"><i class="bi bi-check-square"></i></i> Quick Start</h4>
+    <pre><code>
+pip install pipenv
+pipenv install django 
+pipenv shell
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
+    </code></pre>
+
+    <h4 class="mt-4"><i class="bi bi-check-square"></i> Security</h4>
+    <p>Admin users are automatically logged out when they leave the admin panel for security. CSRF protection and custom error pages are also implemented.</p>
+
+    <h4 class="mt-4"><i class="bi bi-check-square"></i> Test This App</h4>
+    <p>Use <code>test.http</code> (included in the 'task_management/' folder) with VS Code REST Client to test all project URLs.</p>
+
+    <h4 class="mt-4"><i class="bi bi-check-square"></i> Project Structure</h4>
+    <pre><code>
+task_management/
+├── tasks_app/
+│   ├── views.py
+│   ├── models.py
+│   ├── templates/
+│   ├── middleware.py
+│   └── urls.py
+├── test.http
+├── README.md
+├── manage.py
+└── settings.py
+    </code></pre>
+
+    <p class="mt-4"><em>Created by Laura for the 2025 S1 Web Assignment 1</em></p>
+</div>
+{% endblock %}

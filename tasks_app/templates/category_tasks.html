@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Tasks in {{ category.name }}{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-primary mb-4 text-dark">
+        <i class="bi bi-folder2-open text-dark"></i>
+        Tasks in {{ category.name }}
+    </h2>
+
+    <ul class="list-group">
+        {% for task in tasks %}
+            <li class="list-group-item">
+                <a href="{% url 'tasks_app:task_detail' task.id %}" class="text-decoration-none fw-bold">
+                    {{ task.title }}
+                </a>
+            </li>
+        {% empty %}
+            <li class="list-group-item text-muted">No tasks in this category.</li>
+        {% endfor %}
+    </ul>
+
+    <div class="mt-4">
+        <a href="{% url 'tasks_app:category_list' %}" class="btn btn-secondary">
+            <i class="bi bi-arrow-left"></i>
+            Back to Categories
+        </a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+### Task List
+GET http://127.0.0.1:8000/tasks_app/tasks/
+
+### Create Task Form Page
+GET http://127.0.0.1:8000/tasks_app/tasks/new
+
+### Task Detail
+GET http://127.0.0.1:8000/tasks_app/tasks/2
+
+### Category List
+GET http://127.0.0.1:8000/tasks_app/categories/
+
+### Tasks in Category 
+GET http://127.0.0.1:8000/tasks_app/categories/4/
+
+### Trigger 404 (non-existent page)
+GET http://127.0.0.1:8000/thispagedoesnotexist/
+
+### Trigger 500 (intentional error)
+GET http://127.0.0.1:8000/tasks_app/test_500_error/
+
+### Admin Login Page
+GET http://127.0.0.1:8000/admin/
+
