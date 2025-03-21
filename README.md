@@ -32,7 +32,7 @@ Use test.http (included in the task_management/ folder) with the VS Code REST Cl
 
 ✨ Live Demo
 
-👉 Click here to view the GitHub Pages version
+👉 Click here to view the GitHub Pages version: https://smilyy.github.io/Task-Management-Application/
 
 
 ✨ Created by Laura all rights reserved ✨
